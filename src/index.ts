@@ -10,13 +10,13 @@ function extractFilePathFromFileUrl(url?: string | null) {
   return fileURLToPath(url);
 }
 
-export function getFilename() {
+export function getFileName() {
   const url = callsites()[1]?.getFileName();
 
   return extractFilePathFromFileUrl(url);
 }
 
-export function getDirname() {
+export function getDirName() {
   // Can't be reused from getFilename because that would change the callstack and make [1] not what we need.
   const url = callsites()[1]?.getFileName();
 
@@ -33,5 +33,5 @@ export function getModulePaths() {
   };
 }
 
-export const __filename = getFilename;
-export const __dirname = getDirname;
+export const __filename = getFileName;
+export const __dirname = getDirName;

@@ -3,8 +3,8 @@ import {
   getModulePaths,
   __dirname as dirnameFn,
   __filename as filenameFn,
-  getDirname,
-  getFilename,
+  getDirName,
+  getFileName,
 } from "../dist/index.js";
 import { URL } from "url";
 import { dirname } from "path";
@@ -21,5 +21,5 @@ ok(actualDirName === __dirname, "__dirname matches");
 ok(actualFileName === filenameFn(), "__filename matches");
 ok(actualDirName === dirnameFn(), "__dirname matches");
 
-ok(actualFileName === getFilename(), "__filename matches");
-ok(actualDirName === getDirname(), "__dirname matches");
+ok(actualFileName === getFileName(), "__filename matches");
+ok(actualDirName === getDirName(), "__dirname matches");
