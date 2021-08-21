@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "test": "npm run build && node test/smoke.js",
-    "build": "rm -rf dist/ && tsc"
+    "build": "rm -rf dist/ && tsc",
+    "type-check": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
