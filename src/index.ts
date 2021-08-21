@@ -11,16 +11,26 @@ function extractFilePathFromFileUrl(url?: string | null) {
 }
 
 export function getFilename() {
-  const fileName = callsites()[1]?.getFileName();
+  const url = callsites()[1]?.getFileName();
 
-  return extractFilePathFromFileUrl(fileName);
+  return extractFilePathFromFileUrl(url);
 }
 
 export function getDirname() {
   // Can't be reused from getFilename because that would change the callstack and make [1] not what we need.
-  const fileName = callsites()[1]?.getFileName();
+  const url = callsites()[1]?.getFileName();
 
-  return dirname(extractFilePathFromFileUrl(fileName));
+  return dirname(extractFilePathFromFileUrl(url));
+}
+
+export function getModulePaths() {
+  const url = callsites()[1]?.getFileName();
+  const fileName = extractFilePathFromFileUrl(url);
+
+  return {
+    __filename: fileName,
+    __dirname: dirname(fileName),
+  };
 }
 
 export const __filename = getFilename;
