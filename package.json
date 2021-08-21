@@ -1,7 +1,7 @@
 {
   "name": "esm-module-paths",
   "version": "1.0.0",
-  "description": "",
+  "description": "Returns dirname and filename for ESM modules in node",
   "exports": {
     ".": "./dist/index.js"
   },
