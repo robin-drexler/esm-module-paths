@@ -5,6 +5,8 @@ Instead, you need to copy/paste [multiple lines](https://stackoverflow.com/a/500
 
 This package makes this a bit easier.
 
+## Usage
+
 Imagine a file in `./your/path/index.js`
 
 ```js
@@ -17,4 +19,16 @@ Since `__dirname` and `__filename` being functions may be confusing to some, esp
 
 ```js
 import {getFileName, getDirName}
+```
+
+## Installation
+
+```
+npm install esm-module-paths
+```
+
+or
+
+```
+yarn add esm-module-paths
 ```
