@@ -1,6 +1,6 @@
 {
   "name": "esm-module-paths",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returns dirname and filename for ESM modules in node",
   "exports": {
     ".": "./dist/index.js"
@@ -10,6 +10,7 @@
   "files": [
     "dist"
   ],
+  "repository": "robin-drexler/esm-module-paths/",
   "scripts": {
     "test": "npm run build && node test/smoke.js",
     "build": "rm -rf dist/ && tsc",
